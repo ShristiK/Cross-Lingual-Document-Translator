@@ -1,0 +1,6 @@
+Innovation:
+
+
+IBM model 1 has certain shortcomings like the problem of distortion in which model 1 doesn’t handle the case of rearrangement of words in the target sentence according to its grammatical syntax or the fertility problem. But, apart from these, IBM model 1 also has another major issue due to its hypothesis of only 1 NULL word per sentence. The issue which occurs due to this is that model 1 seems to align too few target words to the NULL source word. There is also a non structural problem associated with Model 1 according to which rare words get aligned to too many words in the target language.
+
+In the innovation part of our assignment we have tackled the above stated issues using a novel approach. The approach we have used here is that we have used a function which smoothes the translation probability estimates by adding virtual counts according to a uniform probability distribution over all target words and have added a fixed number of null words to solve the other problem. We have also implemented IBM model 3 which handles the case of distortion and fertility. 
