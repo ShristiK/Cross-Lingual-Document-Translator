@@ -1,1 +1,28 @@
 
+ASSUMPTIONS:
+•	A constant MIN_PROB is defined which limits the probability of english word given foreign word otherwise the english vocabulary is too large to maintain accuracy while translation and it will not give good results. 
+•	A sample size of 0.1 is taken to train the model as dataset was very large. Random Sampling is used.
+•	In IBM Model1 only 1 NULL word is assumed to be added explicitly in source.
+   
+ MODULES
+1.	 get_corpus:  English and Dutch datasets are taken and firstly pre-processed as following:
+•	Replacing digits and characters other than letters with empty string 
+•	Trimming the end part of the sentences.
+•	If sentence is empty after preprocessing it is removed as well.
+A list of pairs is made i.e. A list of pair of corresponding English and Dutch sentences (CORPUS)
+Random Sampling is used to train our dataset. Sample size of 0.1 times is taken as random and returned as final corpus.
+2.	train: takes a corpus and number of iterations and calls train_iteration that many times.
+3.	set_uniform_probabilities: The initial probabilities in translation table are set assuming uniform distribution with probability as 1/(length of English vocabulary) 
+4.	init_vocab: Generates English and Dutch vocabulary
+
+5.	maximize_lexical_translation_probabilities: It updates the translation the translation table of each iteration by calculation total count of each target and source word(with normalization).
+6. prob_all_alignments : returns sum of all possible   alignment of target word t with all source word s.
+
+Utility Modules
+•	translate_sentence: generating translation of each dutch sentence. It calls get_translation to get translation of each word in the translation table and return it without reordering(property of IBM Model 2) as it is.
+•	get_translation: It gets the maximum probability i.e. p(e|f) for each English word and takes it as translated word.
+ 
+
+Flow Of Algorithm
+Train method is called initially which calls train_iteration. In train_Iteration the count dictionary is made which is used to update translation model. The translation model gets updated using E-M Method. Model generates Translation table which ultimately is improvised with given number of iterations.
+ Then translation method(translate_sentence) is called for given trained model which ultimately gives us translated document. It tokenizes the source sentence and gets the corresponding translated word (assuming they map continuously with no distortion) and returns final sentence.
