@@ -1,10 +1,10 @@
 # Cross-Lingual-Document-Translator
 <p align="center"> <b>Shristi Kumari (BITS Pilani) </b> </p>
 
-This project is part of an Assignement of the course Information Retrieval. The aim of this project is to develop a translator which could translate sentences from English to Dutch and vice versa. The translator has been developed using IBM Model1.
+This project is part of an Assignement of the course Information Retrieval. The aim of this project is to develop a translator which could translate sentences from English to Dutch and vice versa. The translator has been developed using IBM  Model 1.
 
 # Data
-The dataset for this project consists of Dutch sentences and their corresponding English translations. Both the files can be downloaded from https://drive.google.com/open?id=1WfFiH2x1du4Ctqdw0lVa-t6S_EX-ZHjE. 
+The dataset for this project consists of Dutch sentences and their corresponding English translations. Both the files can be downloaded from https://drive.google.com/drive/folders/1ZWZrds7AaYatiyyIB8jBAEfZ7g03Atlc?usp=sharing.
 
 # Approach Used
 Machine Translation uses software techniques for translating text or speech from one language to another. Statistical Machine Translation is a part of Machine Translation paradigm which uses statistical models where the parameters are set based on a training corpora. In this project IBM model 1 which is a part of Statistical Machine Translation has been used.
