@@ -1,5 +1,5 @@
 # Cross-Lingual-Document-Translator
-<p align="center"> <b>Shristi Kumari (BITS Pilani) </b> </p>
+<p align="center"> <b>Shristi Kedia (BITS Pilani) </b> </p>
 
 This project is part of an Assignement of the course Information Retrieval. The aim of this project is to develop a translator which could translate sentences from English to Dutch and vice versa. The translator has been developed using IBM  Model 1.
 
